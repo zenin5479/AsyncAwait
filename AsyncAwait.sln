@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_AsyncAwait_DotPeek", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_AsyncAwait_DotPeek_Clean", "AsyncAwaitOneDotPeekClean\003_AsyncAwait_DotPeek_Clean.csproj", "{01124994-E70A-40FB-AB62-0A7EFFC188D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitTwo", "AsyncAwaitTwo\AsyncAwaitTwo.csproj", "{EB8926ED-34C1-4E16-ACA1-D724CBA695F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004_AsyncAwait", "AsyncAwaitTwo\004_AsyncAwait.csproj", "{EB8926ED-34C1-4E16-ACA1-D724CBA695F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
