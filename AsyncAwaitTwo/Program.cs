@@ -18,13 +18,13 @@ namespace AsyncAwaitTwo
         {
             // Id потока совпадает с Id первичного потока.
             // Это значит, что данный метод начинает выполняться в контексте первичного потока.
-            Console.WriteLine("Метод OperationAsync (Часть 1). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Метод OperationAsync (Часть 1). Идентификатор потока: {0}", Thread.CurrentThread.ManagedThreadId);
             Task task = new Task(Operation);
             task.Start();
             await task;
             // Id потока совпадает с Id вторичного потока.
             // Это значит, что данный метод заканчивает выполняться в контексте вторичного потока.
-            Console.WriteLine("Метод OperationAsync (Часть 2). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Метод OperationAsync (Часть 2). Идентификатор потока: {0}", Thread.CurrentThread.ManagedThreadId);
         }
 
         static void Main()

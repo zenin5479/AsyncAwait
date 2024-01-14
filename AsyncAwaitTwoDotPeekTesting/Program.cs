@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AsyncAwaitTwoDotPeekTesting
 {
-    internal class Program
+    internal class MyClass
     {
         public void Operation()
         {
@@ -26,7 +26,7 @@ namespace AsyncAwaitTwoDotPeekTesting
 
         private struct AsyncStateMachine : IAsyncStateMachine
         {
-            public Program Outer;
+            public MyClass Outer;
             public AsyncVoidMethodBuilder Builder;
             public int State;
             int _counterCallMoveNext;
@@ -62,11 +62,14 @@ namespace AsyncAwaitTwoDotPeekTesting
                 Builder.SetStateMachine(stateMachine);
             }
         }
+    }
 
+    class Program
+    {
         static void Main()
         {
             Console.WriteLine("Идентификатор потока метода Main: {0}", Thread.CurrentThread.ManagedThreadId);
-            Program my = new Program();
+            MyClass my = new MyClass();
             my.OperationAsync();
 
             // Задержка

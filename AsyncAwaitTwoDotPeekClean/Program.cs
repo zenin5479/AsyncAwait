@@ -34,7 +34,7 @@ namespace AsyncAwaitTwoDotPeekClean
             {
                 if (State == -1)
                 {
-                    Console.WriteLine("Метод OperationAsync (Часть 1). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
+                    Console.WriteLine("Метод OperationAsync (Часть 1). Идентификатор потока: {0}", Thread.CurrentThread.ManagedThreadId);
                     Task task = new Task(Outer.Operation);
                     task.Start();
                     State = 0;
@@ -42,7 +42,7 @@ namespace AsyncAwaitTwoDotPeekClean
                     Builder.AwaitOnCompleted(ref awaiter, ref this);
                     return;
                 }
-                Console.WriteLine("Метод OperationAsync (Часть 2). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine("Метод OperationAsync (Часть 2). Идентификатор потока: {0}", Thread.CurrentThread.ManagedThreadId);
             }
 
             void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
