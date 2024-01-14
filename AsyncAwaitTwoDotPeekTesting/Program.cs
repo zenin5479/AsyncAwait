@@ -54,6 +54,7 @@ namespace AsyncAwaitTwoDotPeekTesting
             }
 
             // builder.AwaitOnCompleted вызывает данный метод синхронно, во время выполнения задачи.
+            // В .NET 4.7.2 выводится в консоль, в версиях .NET Core не выводится.
             void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
             {
                 Console.WriteLine("Метод SetStateMachine Идентификатор потока: {0}", Thread.CurrentThread.ManagedThreadId);
