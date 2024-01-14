@@ -33,19 +33,19 @@ namespace AsyncAwaitOneDotPeekClean
         public void OperationAsync()
         {
             AsyncStateMachine stateMachine;
-            stateMachine.outer = this;
-            stateMachine.builder = AsyncVoidMethodBuilder.Create();
-            stateMachine.builder.Start(ref stateMachine);
+            stateMachine.Outer = this;
+            stateMachine.Builder = AsyncVoidMethodBuilder.Create();
+            stateMachine.Builder.Start(ref stateMachine);
         }
 
         struct AsyncStateMachine : IAsyncStateMachine
         {
-            public MyClass outer;
-            public AsyncVoidMethodBuilder builder;
+            public MyClass Outer;
+            public AsyncVoidMethodBuilder Builder;
 
             void IAsyncStateMachine.MoveNext()
             {
-                Task task = new Task(outer.Operation);
+                Task task = new Task(Outer.Operation);
                 task.Start();
             }
 
