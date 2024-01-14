@@ -9,59 +9,56 @@ namespace AsyncAwaitTwoDotPeekClean
     {
         public void Operation()
         {
-            Console.WriteLine("Operation ThreadID {0}", Thread.CurrentThread.ManagedThreadId);
-            Console.WriteLine("Begin");
+            Console.WriteLine("Идентификатор потока метода Operation: {0}", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Метод Operation запущен");
             Thread.Sleep(2000);
-            Console.WriteLine("End");
+            Console.WriteLine("Метод Operation завершен");
         }
 
         public void OperationAsync()
         {
             AsyncStateMachine stateMachine;
-            stateMachine.outer = this;
-            stateMachine.builder = AsyncVoidMethodBuilder.Create();
-            stateMachine.state = -1;
-            stateMachine.builder.Start(ref stateMachine);
+            stateMachine.Outer = this;
+            stateMachine.Builder = AsyncVoidMethodBuilder.Create();
+            stateMachine.State = -1;
+            stateMachine.Builder.Start(ref stateMachine);
         }
 
         private struct AsyncStateMachine : IAsyncStateMachine
         {
-            public Program outer;
-            public AsyncVoidMethodBuilder builder;
-            public int state;
+            public Program Outer;
+            public AsyncVoidMethodBuilder Builder;
+            public int State;
 
             void IAsyncStateMachine.MoveNext()
             {
-                if (state == -1)
+                if (State == -1)
                 {
-                    Console.WriteLine("OperationAsync (Part I) ThreadID {0}\n", Thread.CurrentThread.ManagedThreadId);
-
-                    Task task = new Task(outer.Operation);
+                    Console.WriteLine("Метод OperationAsync (Часть 1). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
+                    Task task = new Task(Outer.Operation);
                     task.Start();
-
-                    state = 0;
+                    State = 0;
                     TaskAwaiter awaiter = task.GetAwaiter();
-                    builder.AwaitOnCompleted(ref awaiter, ref this);
+                    Builder.AwaitOnCompleted(ref awaiter, ref this);
                     return;
                 }
-
-                Console.WriteLine("\nOperationAsync (Part II) ThreadID {0}", Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine("Метод OperationAsync (Часть 2). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
             }
 
             void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
             {
                 /* Данный метод не играет важной роли в этом примере. */
-                builder.SetStateMachine(stateMachine);
+                Builder.SetStateMachine(stateMachine);
             }
         }
 
         static void Main()
         {
-            Console.WriteLine("Main ThreadID {0}\n", Thread.CurrentThread.ManagedThreadId);
+            Console.WriteLine("Идентификатор потока метода Main: {0}", Thread.CurrentThread.ManagedThreadId);
             Program my = new Program();
             my.OperationAsync();
 
-            // Delay
+            // Задержка
             Console.ReadKey();
         }
     }

@@ -27,7 +27,6 @@ namespace AsyncAwaitTwo
             Console.WriteLine("Метод OperationAsync (Часть 2). Идентификатор потока {0}", Thread.CurrentThread.ManagedThreadId);
         }
 
-
         static void Main()
         {
             Console.WriteLine("Идентификатор потока метода Main: {0}", Thread.CurrentThread.ManagedThreadId);
