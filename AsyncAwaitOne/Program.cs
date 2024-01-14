@@ -6,7 +6,7 @@ namespace AsyncAwaitOne
 {
     class MyClass
     {
-        private void Operation()
+        public void Operation()
         {
             Console.WriteLine("Идентификатор потока метода Operation: {0}", Thread.CurrentThread.ManagedThreadId);
             Console.WriteLine("Метод Operation запущен");
