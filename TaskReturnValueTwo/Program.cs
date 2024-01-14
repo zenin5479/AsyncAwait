@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace TaskReturnValueOne
+namespace TaskReturnValueTwo
 {
     class MyClass
     {
@@ -14,12 +13,12 @@ namespace TaskReturnValueOne
             return Math.BigMul(1212, 2121);
         }
 
-        public void OperationAsync()
+        // Async указывает, что метод является асинхронным.
+        public async void OperationAsync()
         {
             Task<long> task = Task<long>.Factory.StartNew(Operation);
-            TaskAwaiter<long> awaiter = task.GetAwaiter();
-            Action continuation = () => Console.WriteLine("Результат: {0}", awaiter.GetResult());
-            awaiter.OnCompleted(continuation);
+            // Await - ожидание завершения работы асинхронной задачи.
+            Console.WriteLine("Результат: {0}", await task);
         }
     }
 

@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006_AsyncAwait_DotPeek_Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007_Task_ReturnValue", "TaskReturnValueOne\007_Task_ReturnValue.csproj", "{8B243754-8CA4-4979-BE2F-BE00E835E3DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008_Task_ReturnValue", "TaskReturnValueTwo\008_Task_ReturnValue.csproj", "{1D965218-5530-4C6D-BF43-B15BAC573E9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "009_Task_ReturnValue_DotPeek_Clean", "TaskReturnValueTwoDotPeekClean\009_Task_ReturnValue_DotPeek_Clean.csproj", "{557C86F2-045E-42C8-8D87-5C6367471171}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{8B243754-8CA4-4979-BE2F-BE00E835E3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B243754-8CA4-4979-BE2F-BE00E835E3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B243754-8CA4-4979-BE2F-BE00E835E3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D965218-5530-4C6D-BF43-B15BAC573E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D965218-5530-4C6D-BF43-B15BAC573E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D965218-5530-4C6D-BF43-B15BAC573E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D965218-5530-4C6D-BF43-B15BAC573E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557C86F2-045E-42C8-8D87-5C6367471171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557C86F2-045E-42C8-8D87-5C6367471171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557C86F2-045E-42C8-8D87-5C6367471171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557C86F2-045E-42C8-8D87-5C6367471171}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
