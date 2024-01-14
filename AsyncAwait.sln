@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008_Task_ReturnValue", "Tas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "009_Task_ReturnValue_DotPeek_Clean", "TaskReturnValueTwoDotPeekClean\009_Task_ReturnValue_DotPeek_Clean.csproj", "{557C86F2-045E-42C8-8D87-5C6367471171}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010_AsyncAwait_Continuation", "AsyncAwaitContinuation\010_AsyncAwait_Continuation.csproj", "{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{557C86F2-045E-42C8-8D87-5C6367471171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{557C86F2-045E-42C8-8D87-5C6367471171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{557C86F2-045E-42C8-8D87-5C6367471171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
