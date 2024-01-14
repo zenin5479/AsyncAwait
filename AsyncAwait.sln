@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004_AsyncAwait", "AsyncAwai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_AsyncAwait_DotPeek_Clean", "AsyncAwaitTwoDotPeekClean\005_AsyncAwait_DotPeek_Clean.csproj", "{EC093E11-2283-496F-9585-92BBF6684B2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitTwoDotPeekTesting", "AsyncAwaitTwoDotPeekTesting\AsyncAwaitTwoDotPeekTesting.csproj", "{759D6450-C8F6-401D-B549-83CF6E14487F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006_AsyncAwait_DotPeek_Testing", "AsyncAwaitTwoDotPeekTesting\006_AsyncAwait_DotPeek_Testing.csproj", "{759D6450-C8F6-401D-B549-83CF6E14487F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
