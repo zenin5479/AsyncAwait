@@ -6,15 +6,16 @@ namespace AsyncAwaitReturnArgument
 {
     class MyClass
     {
-        double Operation(object argument)
+        long Operation(object argument)
         {
-            Thread.Sleep(2000);
-            return (double)argument * (double)argument;
+            Console.WriteLine("Идентификатор потока метода Operation: {0}", Thread.CurrentThread.ManagedThreadId);
+            Thread.Sleep(1000);
+            return Math.BigMul((int)argument, (int)argument);
         }
 
-        public async Task<double> OperationAsync(double argument)
+        public async Task<long> OperationAsync(int argument)
         {
-            return await Task<double>.Factory.StartNew(Operation, argument);
+            return await Task<long>.Factory.StartNew(Operation, argument);
         }
     }
 
@@ -23,11 +24,11 @@ namespace AsyncAwaitReturnArgument
         static void Main()
         {
             MyClass my = new MyClass();
-            Task<double> task = my.OperationAsync(3);
-
+            Task<long> task = my.OperationAsync(2121212121);
+            Console.WriteLine("Первичный поток завершил работу. Идентификатор потока метода {0}", Thread.CurrentThread.ManagedThreadId);
             task.ContinueWith(t => Console.WriteLine("Результат : {0}", t.Result));
 
-            // Delay
+            // Задержка
             Console.ReadKey();
         }
     }
