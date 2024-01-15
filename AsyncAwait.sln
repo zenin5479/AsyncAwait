@@ -5,23 +5,25 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "001_AsyncAwait", "AsyncAwaitOne\001_AsyncAwait.csproj", "{E0F83304-8889-4809-930A-6F95BA884CD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002_AsyncAwait_DotPeek", "AsyncAwaitOneDotPeek\002_AsyncAwait_DotPeek.csproj", "{5738C9D2-1622-408A-AC55-6AABE89510C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "002_AsyncAwait_DotPeek", "AsyncAwaitOneDotPeek\002_AsyncAwait_DotPeek.csproj", "{5738C9D2-1622-408A-AC55-6AABE89510C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_AsyncAwait_DotPeek_Clean", "AsyncAwaitOneDotPeekClean\003_AsyncAwait_DotPeek_Clean.csproj", "{01124994-E70A-40FB-AB62-0A7EFFC188D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "003_AsyncAwait_DotPeek_Clean", "AsyncAwaitOneDotPeekClean\003_AsyncAwait_DotPeek_Clean.csproj", "{01124994-E70A-40FB-AB62-0A7EFFC188D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004_AsyncAwait", "AsyncAwaitTwo\004_AsyncAwait.csproj", "{EB8926ED-34C1-4E16-ACA1-D724CBA695F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "004_AsyncAwait", "AsyncAwaitTwo\004_AsyncAwait.csproj", "{EB8926ED-34C1-4E16-ACA1-D724CBA695F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005_AsyncAwait_DotPeek_Clean", "AsyncAwaitTwoDotPeekClean\005_AsyncAwait_DotPeek_Clean.csproj", "{EC093E11-2283-496F-9585-92BBF6684B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "005_AsyncAwait_DotPeek_Clean", "AsyncAwaitTwoDotPeekClean\005_AsyncAwait_DotPeek_Clean.csproj", "{EC093E11-2283-496F-9585-92BBF6684B2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006_AsyncAwait_DotPeek_Testing", "AsyncAwaitTwoDotPeekTesting\006_AsyncAwait_DotPeek_Testing.csproj", "{759D6450-C8F6-401D-B549-83CF6E14487F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "006_AsyncAwait_DotPeek_Testing", "AsyncAwaitTwoDotPeekTesting\006_AsyncAwait_DotPeek_Testing.csproj", "{759D6450-C8F6-401D-B549-83CF6E14487F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "007_Task_ReturnValue", "TaskReturnValueOne\007_Task_ReturnValue.csproj", "{8B243754-8CA4-4979-BE2F-BE00E835E3DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "007_Task_ReturnValue", "TaskReturnValueOne\007_Task_ReturnValue.csproj", "{8B243754-8CA4-4979-BE2F-BE00E835E3DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "008_Task_ReturnValue", "TaskReturnValueTwo\008_Task_ReturnValue.csproj", "{1D965218-5530-4C6D-BF43-B15BAC573E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008_Task_ReturnValue", "TaskReturnValueTwo\008_Task_ReturnValue.csproj", "{1D965218-5530-4C6D-BF43-B15BAC573E9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "009_Task_ReturnValue_DotPeek_Clean", "TaskReturnValueTwoDotPeekClean\009_Task_ReturnValue_DotPeek_Clean.csproj", "{557C86F2-045E-42C8-8D87-5C6367471171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009_Task_ReturnValue_DotPeek_Clean", "TaskReturnValueTwoDotPeekClean\009_Task_ReturnValue_DotPeek_Clean.csproj", "{557C86F2-045E-42C8-8D87-5C6367471171}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010_AsyncAwait_Continuation", "AsyncAwaitContinuation\010_AsyncAwait_Continuation.csproj", "{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010_AsyncAwait_Continuation", "AsyncAwaitContinuation\010_AsyncAwait_Continuation.csproj", "{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitContinuationDotPeek", "AsyncAwaitContinuationDotPeek\AsyncAwaitContinuationDotPeek.csproj", "{28B68C9F-1C98-4B99-80D9-98066B916FAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B68C9F-1C98-4B99-80D9-98066B916FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B68C9F-1C98-4B99-80D9-98066B916FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B68C9F-1C98-4B99-80D9-98066B916FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B68C9F-1C98-4B99-80D9-98066B916FAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
