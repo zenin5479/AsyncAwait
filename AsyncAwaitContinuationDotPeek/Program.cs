@@ -5,65 +5,65 @@ using System.Threading.Tasks;
 
 namespace AsyncAwaitContinuationDotPeek
 {
-    class MyClass
-    {
-        public void Operation()
-        {
-            Thread.Sleep(2000);
-            Console.WriteLine("Основная задача");
-        }
+   class MyClass
+   {
+      public void Operation()
+      {
+         Thread.Sleep(2000);
+         Console.WriteLine("Основная задача");
+      }
 
-        public Task OperationAsync()
-        {
-            AsyncStateMachine stateMachine;
-            stateMachine.Outer = this;
-            stateMachine.Builder = AsyncTaskMethodBuilder.Create();
-            stateMachine.State = -1;
-            stateMachine.Builder.Start(ref stateMachine);
-            return stateMachine.Builder.Task;
-        }
+      public Task OperationAsync()
+      {
+         AsyncStateMachine stateMachine;
+         stateMachine.Outer = this;
+         stateMachine.Builder = AsyncTaskMethodBuilder.Create();
+         stateMachine.State = -1;
+         stateMachine.Builder.Start(ref stateMachine);
+         return stateMachine.Builder.Task;
+      }
 
-        private struct AsyncStateMachine : IAsyncStateMachine
-        {
-            // для void OperationAsync() {...}
-            //public AsyncVoidMethodBuilder builder;
-            // для Task OperationAsync() {...}
-            public AsyncTaskMethodBuilder Builder;
-            public MyClass Outer;
-            public int State;
-            TaskAwaiter _awaiter;
+      private struct AsyncStateMachine : IAsyncStateMachine
+      {
+         // для void OperationAsync() {...}
+         //public AsyncVoidMethodBuilder builder;
+         // для Task OperationAsync() {...}
+         public AsyncTaskMethodBuilder Builder;
+         public MyClass Outer;
+         public int State;
+         TaskAwaiter _awaiter;
 
-            void IAsyncStateMachine.MoveNext()
+         void IAsyncStateMachine.MoveNext()
+         {
+            if (State == -1)
             {
-                if (State == -1)
-                {
-                    _awaiter = Task.Factory.StartNew(Outer.Operation).GetAwaiter();
-                    State = 0;
-                    Builder.AwaitOnCompleted(ref _awaiter, ref this);
-                    return;
-                }
-
-                // Задача помечается как успешно выполненная, тогда срабатывает продолжение.
-                Builder.SetResult();
+               _awaiter = Task.Factory.StartNew(Outer.Operation).GetAwaiter();
+               State = 0;
+               Builder.AwaitOnCompleted(ref _awaiter, ref this);
+               return;
             }
 
-            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
-            {
-                Builder.SetStateMachine(stateMachine);
-            }
-        }
-    }
+            // Задача помечается как успешно выполненная, тогда срабатывает продолжение.
+            Builder.SetResult();
+         }
 
-    internal class Program
-    {
-        static void Main()
-        {
-            MyClass my = new MyClass();
-            Task task = my.OperationAsync();
-            task.ContinueWith(t => Console.WriteLine("Продолжение задачи"));
+         void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+         {
+            Builder.SetStateMachine(stateMachine);
+         }
+      }
+   }
 
-            // Задержка
-            Console.ReadKey();
-        }
-    }
+   internal class Program
+   {
+      static void Main()
+      {
+         MyClass my = new MyClass();
+         Task task = my.OperationAsync();
+         task.ContinueWith(t => Console.WriteLine("Продолжение задачи"));
+
+         // Задержка
+         Console.ReadKey();
+      }
+   }
 }
