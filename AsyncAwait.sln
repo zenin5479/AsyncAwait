@@ -17,21 +17,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "006_AsyncAwait_DotPeek_Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "007_Task_ReturnValue", "TaskReturnValueOne\007_Task_ReturnValue.csproj", "{8B243754-8CA4-4979-BE2F-BE00E835E3DD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008_Task_ReturnValue", "TaskReturnValueTwo\008_Task_ReturnValue.csproj", "{1D965218-5530-4C6D-BF43-B15BAC573E9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008_Task_AsyncAwait_ReturnValue", "TaskReturnValueTwo\008_Task_AsyncAwait_ReturnValue.csproj", "{1D965218-5530-4C6D-BF43-B15BAC573E9F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009_Task_ReturnValue_DotPeek_Clean", "TaskReturnValueTwoDotPeekClean\009_Task_ReturnValue_DotPeek_Clean.csproj", "{557C86F2-045E-42C8-8D87-5C6367471171}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010_AsyncAwait_Continuation", "AsyncAwaitContinuation\010_AsyncAwait_Continuation.csproj", "{D3E7556B-0D9C-458C-B9C4-0EA389B4C87F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "011_AsyncAwait_Continuation_DotPeek", "AsyncAwaitContinuationDotPeek\011_AsyncAwait_Continuation_DotPeek.csproj", "{5787D399-10E3-4683-B099-1D05A1E3A25D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011_AsyncAwait_Continuation_DotPeek", "AsyncAwaitContinuationDotPeek\011_AsyncAwait_Continuation_DotPeek.csproj", "{5787D399-10E3-4683-B099-1D05A1E3A25D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "012_AsyncAwait_ReturnValue", "AsyncAwaitReturnValue\012_AsyncAwait_ReturnValue.csproj", "{879FD8A7-6144-4160-8A68-6F3554485012}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "012_AsyncAwait_ReturnValue", "AsyncAwaitReturnValue\012_AsyncAwait_ReturnValue.csproj", "{879FD8A7-6144-4160-8A68-6F3554485012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "013_AsyncAwait_ReturnValue_DotPeek", "AsyncAwaitReturnValueDotPeek\013_AsyncAwait_ReturnValue_DotPeek.csproj", "{9C98894B-867E-474D-BDC6-9E7C607FA45B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "013_AsyncAwait_ReturnValue_DotPeek", "AsyncAwaitReturnValueDotPeek\013_AsyncAwait_ReturnValue_DotPeek.csproj", "{9C98894B-867E-474D-BDC6-9E7C607FA45B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "014_AsyncAwait_ReturnArgument", "AsyncAwaitReturnArgument\014_AsyncAwait_ReturnArgument.csproj", "{BDCC7E98-A398-4664-A8B8-3356AA4DEE8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_AsyncAwait_ReturnArgument", "AsyncAwaitReturnArgument\014_AsyncAwait_ReturnArgument.csproj", "{BDCC7E98-A398-4664-A8B8-3356AA4DEE8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "015_AsyncAwait_ReturnArgument_DotPeek", "AsyncAwaitReturnArgumentDotPeek\015_AsyncAwait_ReturnArgument_DotPeek.csproj", "{CC27E27D-4DDD-478B-9A31-9D449F4F72A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "015_AsyncAwait_ReturnArgument_DotPeek", "AsyncAwaitReturnArgumentDotPeek\015_AsyncAwait_ReturnArgument_DotPeek.csproj", "{CC27E27D-4DDD-478B-9A31-9D449F4F72A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
